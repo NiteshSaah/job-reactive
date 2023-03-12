@@ -1,0 +1,89 @@
+GET http://localhost:8080/job/all
+
+GET http://localhost:8080/job/search
+Content-Type: application/json
+
+{
+  "skills" : ["java"]
+}
+GET http://localhost:8080/job/search?skills=java,
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+  "description": "senior java developer",
+  "company": "amazon",
+  "skills": ["java", "spring", "docker"],
+  "salary": 100000,
+  "isRemote": true
+}
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+  "description": "scrum master",
+  "company": "amazon",
+  "skills": ["agile", "jira", "java"],
+  "salary": 90000,
+  "isRemote": true
+}
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+"description": "Lead java developer",
+"company": "microsoft",
+"skills": ["java", "spring", "docker","agile"],
+"salary": 120000,
+"isRemote": true
+}
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+"description": "java developer",
+"company": "amazon",
+"skills": ["java", "spring", "git"],
+"salary": 900000,
+"isRemote": true
+}
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+"description": "senior Cloud developer",
+"company": "Intel",
+"skills": ["java", "spring", "docker","AWSCloud","Git"],
+"salary": 120000,
+"isRemote": true
+}
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+"description": "junior java developer",
+"company": "amazon",
+"skills": ["JavaScript","Html"],
+"salary": 70000,
+"isRemote": true
+}
+### Send request with dynamic variables in request's body
+POST http://localhost:8080/job/save
+Content-Type: application/json
+
+{
+"description": "senior frontEnd developer",
+"company": "amazon",
+"skills": ["JavaScript","React","Git","Html"],
+"salary": 110000,
+"isRemote": false
+}
+
+
+

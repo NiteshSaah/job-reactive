@@ -1,0 +1,22 @@
+version: "3.0"
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./src/test/resources/data:/docker-entrypoint-initdb.d
+  job-service:
+    build: .
+    image: job-service
+    depends_on:
+      - mongo
+    ports:
+      - "8080:8080"
+    #If use the profiles then use the command : docker-compose --profile=app up
+    #  docker-compose --profile=app down
+    # Note: If we are using simple docker-compose up then only mongo will start to Start all pass profile.
+#    profiles:
+#      - app
+    environment:
+      spring.data.mongodb.uri: "mongodb://job_user:job_password@mongo:27017/job"
